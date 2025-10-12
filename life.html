@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Life</title>
+
+	<link rel="stylesheet" href="css/rezet.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="name">Life</div>
+	<div class="menu">
+		<div class="createLifeOptoins">
+			Начальная расстановка
+			<select id="optoins" name="optoins">
+    			<option value="auto">Авто</option>
+    			<option value="manual">Ручной</option>
+			</select>
+		</div>
+		<div class="speedStep">
+			Скорость эволюции
+			<select id="speedStepData" name="speedStepData">
+    			<option value="slow">Медленно</option>
+    			<option value="normally" selected>Нормально</option>
+    			<option value="fast">Быстро</option>
+			</select>
+		</div>
+	</div>
+	<div class="start">
+		<button id="startGame">Start</button>
+		<div class="text">Количество итераций:<span id="num">0</span></div>
+	</div>
+	<div id="root">
+		<div class="gameList">
+			<div class="nameList">Просмотр сохраненных записей</div>
+			<div class="dataList">
+				<ul class="list">
+					<li class="loading">Загрузка...</li>
+					<li class="itemList">Запись1234</li>
+					<li class="itemList">Запись1234</li>
+				</ul>
+			</div>
+		</div>
+		<div id="plaing-filed"></div>
+	</div>
+
+	<script src="app/app.js"></script>
+</body>
+</html>
