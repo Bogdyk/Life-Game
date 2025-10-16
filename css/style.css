@@ -1,3 +1,7 @@
+body{
+    background-color: #d9b5b5;
+    color: #1e1e2e;
+}
 #root{
     display: flex;
     justify-content: center;
@@ -5,23 +9,26 @@
 }
 #plaing-filed {
     display: grid;
-    grid-template-columns: repeat(20, 1fr); /* 10 в ряд */
-    grid-template-rows: repeat(20, 1fr);    /* 10 вниз */
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr); 
     width: 600px;
     height: 600px;
 }
 
 .point {
-    background: #dcdcdc;
-    border: 1px solid #333;
+    background: #f0f0f0;
+    border: 1px solid #3b3b4f;
     transition: background 0.7s;
+    border-radius: 2px;
 }
 .active{
-    background: red;
+    background: #2196F3;
 }
 .name{
     text-align: center;
     font-size: 18px;
+    color: #0c0101;
+    font-weight: bold;
 }
 .menu{
     display: flex;
@@ -35,11 +42,20 @@
     align-items: center;
     gap: 100px;
 }
-#startGame{
+#startGame, #stopGame{
     padding: 5px 20px;
-    background: blue;
+    background: #2ECC71;
     border-radius: 5px;
     color: #fff;
+}
+#startGame:hover{
+    background: #27AE60;
+}
+#stopGame{
+    background: #C0392B;
+}
+#stopGame:hover{
+    background-color: #A93226;
 }
 .container{
     display: block;
@@ -106,7 +122,7 @@
 .loading{
     text-align: center;
     font-size: 20px;
-    font-weightqw: bold;
+    font-weight: bold;
 }
 .itemList{
     background: #fff;

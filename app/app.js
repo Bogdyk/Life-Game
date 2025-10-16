@@ -189,7 +189,13 @@ function saveRecorder() {
 
     canselBtn.addEventListener("click", ()=>{
         removeModalRecorder(container)
-    })
+    });
+
+    saveBtn.addEventListener("click", ()=>{
+        if(input.value){
+            sendRequest();
+        }
+    });
 
     buttonContainer.append(saveBtn, canselBtn)
     elem.append(containerInput, buttonContainer)
@@ -201,11 +207,16 @@ function removeModalRecorder(container) {
 
     container.remove();
 }
+function sendRequest(){
+    console.log("Save: ", recorderArr)
+}
 document.querySelector("#startGame").addEventListener("click", () => startGame());
 document.querySelector("#optoins").addEventListener("change", () => {
     createGameField(400, document.querySelector("#plaing-filed"));
 });
-
+document.querySelector("#stopGame").addEventListener("click", ()=>{
+    arrLife.forEach(obj=> obj.life = false)
+})
 createGameField(400, document.querySelector("#plaing-filed"));
 
 const byteSize = (str) => {
